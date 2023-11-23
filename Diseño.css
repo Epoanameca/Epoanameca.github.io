@@ -1,0 +1,50 @@
+/* Estilos para el cuerpo del documento */
+body {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+    margin: 0; /* Sin márgenes */
+    padding: 20px; /* Relleno interno de 20px */
+}
+/* Estilos para el título */
+h1 {
+    color: #009900; /* Texto verde */
+}
+/* Estilos para las etiquetas de texto */
+label {
+    display: block; /* Hace que cada etiqueta esté en una nueva línea */
+    margin: 10px 0; /* Espaciado alrededor de cada etiqueta */
+}
+/* Estilos para los campos de entrada y selección */
+input, select {
+    width: 100%; /* Ocupan todo el ancho disponible */
+    padding: 10px; /* Relleno interno de 10px */
+    margin: 5px 0; /* Espaciado alrededor de cada campo */
+    border: 1px solid #ccc; /* Borde de 1px sólido de color gris claro */
+    border-radius: 4px; /* Esquinas redondeadas */
+}
+/* Estilos para los campos de archivo */
+input[type="file"] {
+    width: auto; /* Ancho automático */
+}
+/* Estilos para el botón de envío */
+input[type="submit"] {
+    background-color: #ff0000; /* Fondo rojo */
+    color: #ffffff; /* Texto blanco */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+/* Posición de los logos en las esquinas */
+.logo-izquierda {
+    position: absolute; /* Posición absoluta */
+    max-width: 8%; /* La imagen no será más ancha que su contenedor */
+    max-height: 8%; /* La imagen no será más alta que su contenedor */
+    top: 10px; /* 10px desde arriba */
+    left: 1000px; /* 10px desde la izquierda */
+}
+.logo-derecha {
+    position: absolute; /* Posición absoluta */
+    top: 10px; /* 10px desde arriba */
+    right: 10px; /* 10px desde la derecha */
+    width: 100px; /* Ancho de la imagen */
+    height: auto; /* Altura automática según la proporción original */
+}
