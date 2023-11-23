@@ -1,1 +1,23 @@
+name: Upload Documents
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Upload documents
+        run: |
+          mkdir documents
+          mv ${{ github.event_name }}/* documents/
+          git add .
+          git commit -m "Add new documents"
+          git push
 
