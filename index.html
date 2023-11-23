@@ -11,7 +11,7 @@
     <img src="ANEXA5.jpg"  alt="Logo Izquierda" class="logo-izquierda"> <!-- Muestra una imagen llamada logo_izquierda.png con un texto alternativo "Logo Izquierda" y una clase CSS "logo-izquierda" -->
     <img src="logo.png" alt="Logo Derecha" class="logo-derecha"> <!-- Muestra una imagen llamada logo_derecha.png con un texto alternativo "Logo Derecha" y una clase CSS "logo-derecha" -->
     <h1>Formulario de Becas</h1> <!-- Muestra un encabezado de nivel 1 con el texto "Formulario de Becas" -->
-    <form method="post" enctype="multipart/form-data" onsubmit="return validarFormulario()"> <!-- Inicia un formulario con el método POST, la codificación de datos multipart/form-data y un evento onsubmit que llama a una función validarFormulario() cuando se envía el formulario -->
+    <form id="miFormulario" method="post" enctype="multipart/form-data" onsubmit="return validarFormulario()"> <!-- Inicia un formulario con el método POST, la codificación de datos multipart/form-data y un evento onsubmit que llama a una función validarFormulario() cuando se envía el formulario -->
         <label for="nombre">Nombre:</label> <!-- Muestra una etiqueta "Nombre" asociada a un campo de texto con el id "nombre" -->
         <input type="text" id="nombre" name="nombre"><br> <!-- Crea un campo de texto con el id "nombre" y el nombre "nombre" -->
 
