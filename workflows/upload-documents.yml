@@ -1,23 +1,33 @@
-name: Upload Documents
+name: Despliegue en GitHub Pages
 
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
-  upload:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout del código
         uses: actions/checkout@v2
 
-      - name: Upload documents
-        run: |
-          mkdir documents
-          mv ${{ github.event_name }}/* documents/
-          git add .
-          git commit -m "Add new documents"
-          git push
+      - name: Configurar Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Construir el sitio web
+        run: npm run build  # Ajusta esto según tus scripts de construcción
+
+      - name: Desplegar en GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages  # O el nombre de la rama que estás utilizando para GitHub Pages
+          FOLDER: build  # Carpeta que contiene los archivos a desplegar
 
